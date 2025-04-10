@@ -1,5 +1,6 @@
 # Title: multi_find_markers.R
-# Date: 2025-04-09
+# Date: 2025-04-10
+# https://github.com/ydgenomics/git_test/blob/main/SCRIPTs/multi_find_markers.R
 # This script is designed to analyze single-cell RNA sequencing data using the Seurat package.
 # It provides functionality to identify marker genes across different groups or conditions.
 # The script supports multiple tools such as FindAllMarkers, FindConservedMarkers, FindMarkers, and FindMultiMarkers.
@@ -12,17 +13,17 @@ library(dplyr)
 library(optparse)
 
 option_list <- list(
-    make_option(c("-r", "--rds"), type = "character", default = "/data/work/peanut/integrated_new1.2.rds", help = "Path to RDS file"),
+    make_option(c("-r", "--rds"), type = "character", default = "/data/work/peanut/convert/peanut_dataget_Anno_concat.cg.rds", help = "Path to RDS file"),
     make_option(c("-t", "--tool"), type = "character", default = "FindAllMarkers,FindConservedMarkers,FindMarkers,FindMultiMarkers", help = "Tools to use"),
     make_option(c("-a", "--assay"), type = "character", default = "RNA", help = "Assay to use"),
     make_option(c("-s", "--slot"), type = "character", default = "data", help = "Slot to use"),
     make_option(c("-v", "--sample_var"), type = "character", default = "biosample", help = "Sample variable"),
-    make_option(c("-g", "--group_var"), type = "character", default = "celltype", help = "Group variable"),
+    make_option(c("-g", "--group_var"), type = "character", default = "cell", help = "Group variable"),
     make_option(c("-p", "--min_pct"), type = "numeric", default = 0.01, help = "Minimum percentage"),
     make_option(c("-l", "--log_fc"), type = "numeric", default = 0.1, help = "Log fold change threshold"),
-    make_option(c("-n", "--name"), type = "character", default = "test", help = "Output name"),
-    make_option(c("-1", "--sample_1"), type = "character", default = "Mut", help = "Sample 1"),
-    make_option(c("-2", "--sample_2"), type = "character", default = "WT", help = "Sample 2")
+    make_option(c("-n", "--name"), type = "character", default = "peanut", help = "Output name"),
+    make_option(c("-1", "--sample_1"), type = "character", default = "WT", help = "Sample 1"),
+    make_option(c("-2", "--sample_2"), type = "character", default = "Mut", help = "Sample 2")
 )
 opt <- parse_args(OptionParser(option_list = option_list))
 rds <- opt$rds
@@ -48,6 +49,7 @@ if (assay == "RNA") {
 
 # FindAllMarkers
 if ("FindAllMarkers" %in% tool) {
+    Idents(seu) <- group_var
     allmarkers <- FindAllMarkers(seu, assay = assay, slot = slot, group.by = group_var, only.pos =T, min.pct = min_pct, logfc.threshold = log_fc) # nolint
     print(dim(allmarkers))
     print(head(allmarkers))
