@@ -1,4 +1,0 @@
-EntityID,input_h5ad,pre_ind,pre_stim,pre_cell,ctrl_name,cell_type_list,perform_2d_test,cpu,mem
-Types,File,String,String,String,String,String,String,Int,Int
-memento-test,/Files/Chara/yangdong/memento/Pog_unsoupx.h5ad,sample,sample,leiden_res_0.50,V2.5R2404290045,"0,1",yes,2,8
-demo-test,/Files/Chara/yangdong/memento/interferon_filtered.h5ad,ind,stim,cell,ctrl,"CD14+ Monocytes,CD4 T cells",yes,2,16

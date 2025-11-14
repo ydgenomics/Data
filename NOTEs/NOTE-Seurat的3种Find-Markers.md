@@ -1,4 +1,0 @@
-- [FindAllMarkers](https://satijalab.org/seurat/reference/findallmarkers) --各个cluster的Marker基因
-- [FindConservedMarkers](https://satijalab.org/seurat/reference/findconservedmarkers) --关注每个cluster里面代表各个样本的Marker基因
-- [FindMarkers](https://satijalab.org/seurat/reference/findmarkers) --找两组对象的差异表达Marker
-- [ydgenomics-SCRIPTs/multi_find_markers.R](../SCRIPTs/multi_find_markers.R)

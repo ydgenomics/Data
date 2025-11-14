@@ -1,7 +1,0 @@
-SampleID,Tnumber,Sample,Species,Premethod,Maxrho,Group_key,cpu,mem
-Type,Array[File],Array[String],String,String,Float,String,Array [Int],Array [Int]
-Cer_leaf,/Files/ResultData/Workflow/W202408260001602,V2.5R2407020004,Cer_leaf,scRNA-seq_v3,0.3,sample,2,4
-Cer_leaf,/Files/ResultData/Workflow/W202408260001603,V2.5R2407020005,,,,,2,8
-Cer_leaf,/Files/ResultData/Workflow/W202408260001604,V2.5R2407020006,,,,,,
-Pog_root,/Files/ResultData/Workflow/W202410210001037,V2.5R2404290045,Pog_root,scRNA-seq_v3.1.5,0.3,sample_test,2,2
-Pog_root,/Files/ResultData/Workflow/W202410240001159,V2.5R2404290046,,,,,2,4

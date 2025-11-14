@@ -1,7 +1,0 @@
-EntityID,orig_h5ad,file_scvi,file_unintegration,file_sct_cca,file_rliger_inmf,file_bbknnr,file_harmony,file_sct_harmony,#TASK,cpus,mems
-Types,File,File,File,File,File,File,File,File,#TASK,Array [Int],Array [Int]
-scib_1024,/Files/ResultData/Notebook/yangdong/output/P18Z10200N0114/20241011112454/Cer_test.h5ad,/Files/ResultData/Workflow/W202410230000771/dealplus4/Cer_1012_scVI_integrated.h5ad,/Files/ResultData/Workflow/W202410230000771/dealplus4/Cer_1012_unintegration_integrated.h5ad,/Files/ResultData/Workflow/W202410230000771/dealplus4/Cer_1012_SCTransform.CCA_integrated.rds,/Files/ResultData/Workflow/W202410230000771/dealplus4/Cer_1012_rliger.INMF_integrated.rds,/Files/ResultData/Workflow/W202410230000771/dealplus4/Cer_1012_BBKNNR_integrated.rds,/Files/ResultData/Workflow/W202410230000771/harmony/Cer_1012_harmony_integrated.h5ad,/Files/ResultData/Workflow/W202410230000771/SCTransform.harmony/Cer_1012_SCTransform.harmony_integrated.rds,convert2,1,12
-scib_1024,,,,,,,,,"rliger,bbknnr",2,8
-scib_1024,,,,,,,,,"scvi,cca",2,16
-scib_1024,,,,,,,,,unintegration,2,24
-scib_1024,,,,,,,,,harmony,4,60
